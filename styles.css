@@ -8,7 +8,8 @@
     box-sizing: border-box;
 }
 body{
-    background-image: linear-gradient(to right top, #f99dcd, #e3abe4, #cbb8ef, #b8c3f1, #afcbec);
+    
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
     margin: 0 auto;
     min-height:100vh;
     width:100%; 
@@ -90,8 +91,9 @@ h3{
 }
 .skills span{
   background-color:gray;
-  border-radius: 150px;
+  border-radius: 170px;
   height:35px;
+
 
 }
 .About-content {
@@ -109,7 +111,7 @@ h3{
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 0.8rem;
+    font-size: 0.8 rem;
     transition: background-color 0.5s;
 }
 
@@ -125,7 +127,7 @@ h3{
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   align-content: center;
   gap: 15px;
-  margin:20px;
+  /* margin:20px 25px; */
 
 }
 .Project{
@@ -135,7 +137,7 @@ h3{
     width: 300px;
     text-align:center;
     padding:10px;
-    margin: 10px ;
+    margin: 10px 10px ;
 }
 .Contacts{
     background-color: rgba(219, 14, 14, 0.2);
@@ -199,7 +201,7 @@ h3{
 }
 .Project {
   width: 100%;
-  margin: 0 auto;
+  margin: 2 auto;
 }
 .Profile {
   width: 100%;
@@ -222,7 +224,7 @@ h3{
     display:none;
   }
   body{
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+     background-image: linear-gradient(to right top, #f99dcd, #e3abe4, #cbb8ef, #b8c3f1, #afcbec);
   }
   .About_me {
     grid-template-columns: 1fr ;
@@ -241,7 +243,7 @@ h3{
     grid-template-columns: 1fr, 1fr;
   }
 
-  .Contacts form {
+  .Contacts,.intro {
     width: 90%;
     color:white;
   }
