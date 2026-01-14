@@ -15,9 +15,22 @@
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script> -->
-    <style></style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js" defer ></script>
+    <style>
+      body {
+        padding: 25px;
+        background:linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+        color: black;
+        font-size: 25px;
+}
+
+      .light-mode {
+        background: linear-gradient(90deg,rgba(83, 184, 224, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+        color: black;
+}
+    </style>
   </head>
   <body>
     <header>
@@ -28,17 +41,27 @@
         width="150px"
         height="70px"
       />
-
-      <!-- Navigation Bar -->
-      <nav class="nav-menu ">
-        <ul class="nav-list">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#project">Projects</a></li>
-          <li><a href="#contact">Contacts</a></li>
-        </ul>
+      <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
+        <div class="bg-dark p-3">
+          <ul class="nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#project">Projects</a></li>
+            <li><a href="#contact">Contacts</a></li>
+          </ul>
+        </div>
+      </div>
+      <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid ">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <button id="themeToggle"  class="btn-outline-secondary bg-dark p-1 rounded-2  border border-secondary " onclick="myFunction()">
+          Toggle light mode </button>
       </nav>
     </header>
+
     <br />
     <!-- Introduction -->
     <section id="home" class="Hero-section p-5 m-3 fs-4 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-2">
@@ -74,18 +97,54 @@
     <br />
     <!-- Projects Section -->
     <section Class="Projects p-3 m-3 fs-4 bg-danger-subtle border border-primary-subtle text-primary-emphasis rounded-2">
-      <h2 class="intro">My Projects</h2>
-      <div class="Project-grid p-2 m-2">
+      <h2 class="intro d-flex justify-content-center ">My Projects</h2>
+      <div id="carouselExample" class="carousel slide w-80">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+                <div class="Project fst-normal  border-primary-subtle">
+                <img src="/assets/UNICORN.PNG" class="d-block  mx-auto p-3" >
+                <h4>Birthday Card</h4>
+                <p>Birthday card project using Html,css</p>
+                <button type="button" class="Btn">View Project </button>
+              </div>
+          </div>
+          <div class="carousel-item">
+            <div class="Project  fst-normal p-2 m-3 justify-content-center border-primary-subtle">
+                <img src="/assets/web accessible design.png" class="d-block  mx-auto p-3">
+                <h3>Accessible Web Design</h3>
+                <p> I have created a accessible design company website using HTML and CSS </p>
+              <button type="button" class="Btn">View Project </button>
+              </div>
+            
+          </div>
+            <div class="carousel-item">
+            <div class="Project  p-2 m-2 justify-content-center border-primary-subtle">
+              <img src="/assets/Meal_planner.png" class="d-block  mx-auto p-3">
+              <h4>Meal Planner APP</h4>
+              <p> Created Meal planner App using Html, Css and Javascript</p>
+              <button type="button" class="Btn">View Project</button>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- <div class="Project-grid p-2 m-2">
         <div class="Project fst-normal">
-          <img src="/assets/UNICORN.PNG" width="200" height = 150 >
+          <img src="/assets/UNICORN.PNG" class="d-block w-100" >
           <h4>Birthday Card</h4>
           <p>Birthday card project using Html,css</p>
           <button type="button" class="Btn">View Project </button>
         </div>
 
-      <!-- <aside> -->
         <div class="Project">
-          <img src="/assets/web accessible design.png" >
+          <img src="/assets/web accessible design.png" class="d-block w-100" >
           <h3>Accessible Web Design</h3>
           <p>
             I have created a accessible design company website using HTML and
@@ -95,17 +154,15 @@
         </div>
 
       <div class="Project">
-        <img src="/assets/Meal_planner.png" weight="200px" height="150px">
+        <img src="/assets/Meal_planner.png" class="d-block w-100">
         <h4>Meal Planner APP</h4>
         <p> Created Meal planner App using Html, css and Javascript</p>
         <button type="button" class="Btn">View Project</button>
       </div>
-      </div>
+      </div> -->
     </section>
-    <!-- </aside> -->
+
     <br />
-
-
     <section class="Contacts p-4 m-3 text-primary-emphasis border border-primary-subtle rounded-2">
       <h2 class ="intro">Contact me</h2>
        <div class="Class-container">
@@ -140,5 +197,7 @@
         <p class="copyright">&copy; 2025 My Portfolio.All rights reserved.</p>
       </div>
     </footer>
+   
+
   </body>
 </html>
